@@ -21,7 +21,4 @@ void main() async {
 
   /// Add Contact Tag
   m.addTag({'a', 'b'});
-
-  /// Remove Contact Tag
-  m.removeTag({'a', 'b'});
 }
