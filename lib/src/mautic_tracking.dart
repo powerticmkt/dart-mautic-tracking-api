@@ -81,21 +81,21 @@ class MauticTracking {
     var _uri = Uri.http(_tracking_url, 'mtracking.gif', params);
 
     var client = HttpClient();
+    client.userAgent = userAgent;
 
     await client.getUrl(_uri).then((HttpClientRequest request) {
       /// Prepare Request
       request.headers.set('Accept-Language', 'en-us');
       request.headers.set('Accept-Encoding', 'gzip, deflate');
-      request.headers.set('User-Agent', userAgent);
 
+      /// Setting Up Cookies
       if (contactCookie.value.isNotEmpty) {
         request.cookies.add(contactCookie);
         request.cookies.add(deviceCookie);
         request.cookies.add(sessionCookie);
       }
 
-      print(request.cookies.toString());
-
+      /// Make Request
       return request.close();
     }).then((HttpClientResponse response) {
       /// Return Response

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- Updated Readme
+- Fix User Agent
+- Flutter Example
+
 ## 1.0.0
 
 - Initial Version
