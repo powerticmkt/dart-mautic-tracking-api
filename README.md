@@ -54,6 +54,8 @@ void main() async {
 }
 ```
 
+See a complete Flutter example at [example/example_app/lib/main.dart](https://github.com/powerticmkt/dart-mautic-tracking-api/blob/master/example/example_app/lib/main.dart)
+
 ## Setting Up
 
 There are some options to instantiate `MauticTracking`:
