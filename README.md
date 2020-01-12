@@ -89,6 +89,8 @@ These are the constructor options:
 
 The act of monitoring the traffic and activity of contacts can sometimes be somewhat technical and frustrating to understand. Mautic Tracking API makes this monitoring simple and easy to configure.
 
+![Contact Timeline](./docs/contact_timeline.png)
+
 ## Tracking Screens
 
 Send App Screen info to Mautic.
@@ -109,6 +111,8 @@ Future<void> trackScreen(String screenPath, [String screenName]) async;
 You can send screen tracking info only with `screenPath`.
 
 Create your screen paths using **_** to separate words and always use **small caps**.
+
+![Contact Timeline](./docs/screen_track.png)
 
 ```dart
 mautic.trackScreen("main");
