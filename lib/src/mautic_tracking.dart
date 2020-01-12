@@ -150,7 +150,7 @@ class MauticTracking {
   /// trackScreen('view_contact', 'View Contact Info');
   /// ```
   void trackScreen(String screenPath, [String screenName]) async {
-    if (screenName.isEmpty) {
+    if (screenName == null) {
       await _makeRequest(
         params: {
           'page_url': screenPath,
