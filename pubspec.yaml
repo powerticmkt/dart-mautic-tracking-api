@@ -8,4 +8,4 @@ environment:
 
 dependencies:
   path: ^1.6.0
-  http:
+  http: ^0.12.0+4
