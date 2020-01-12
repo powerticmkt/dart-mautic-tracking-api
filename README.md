@@ -54,6 +54,14 @@ void main() async {
 }
 ```
 
+When the App is Started, this event will be fired:
+
+![Started App](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/started_app.png)
+
+If the contact doesn't exists on Mautic, the contact will be identified by `app_started`.
+
+![Contact Identified](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/contact_identified.png)
+
 See a complete Flutter example at [example/example_app/lib/main.dart](https://github.com/powerticmkt/dart-mautic-tracking-api/blob/master/example/example_app/lib/main.dart)
 
 ## Setting Up
@@ -89,11 +97,13 @@ These are the constructor options:
 
 The act of monitoring the traffic and activity of contacts can sometimes be somewhat technical and frustrating to understand. Mautic Tracking API makes this monitoring simple and easy to configure.
 
-![Contact Timeline](./docs/contact_timeline.png)
+![Contact Timeline](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/contact_timeline.png)
 
 ## Tracking Screens
 
 Send App Screen info to Mautic.
+
+![Screen Track](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/screen_track.png)
 
 **Method Definition:**
 
@@ -112,8 +122,6 @@ You can send screen tracking info only with `screenPath`.
 
 Create your screen paths using **_** to separate words and always use **small caps**.
 
-![Contact Timeline](./docs/screen_track.png)
-
 ```dart
 mautic.trackScreen("main");
 ```
@@ -127,6 +135,8 @@ mautic.trackScreen("main", "Main Page");
 ## Tracking Events
 
 Send App Event info to Mautic.
+
+![Event Track](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/event_track.png)
 
 **Method Definition:**
 
@@ -161,6 +171,8 @@ mautic.trackEvent('click_getting_start', 'Click Get Start Button', 'home', 'Home
 
 Add tag to contact.
 
+![Contact Timeline](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/added_tag.png)
+
 ```dart
 mautic.addTag({'a', 'b'});
 ```
@@ -172,6 +184,8 @@ mautic.addTag({'a', 'b'});
 ### Removing Contact Tags
 
 Remove tag to contact.
+
+![Contact Timeline](https://github.com/powerticmkt/dart-mautic-tracking-api/raw/master/docs/removed_tag.png)
 
 ```dart
 mautic.removeTag({'a', 'b'});
