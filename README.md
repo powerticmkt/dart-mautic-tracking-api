@@ -96,7 +96,7 @@ Send App Screen info to Mautic.
 **Method Definition:**
 
 ```dart
-void trackScreen(String screenPath, [String screenName]) async;
+Future<void> trackScreen(String screenPath, [String screenName]) async;
 ```
 
 | Property     | Type     | Required | Description               |
@@ -127,7 +127,7 @@ Send App Event info to Mautic.
 **Method Definition:**
 
 ```dart
-void trackEvent(String eventKey, String eventName, String screenPath, [String screenName]) async;
+Future<void> trackEvent(String eventKey, String eventName, String screenPath, [String screenName]) async;
 ```
 
 | Property     | Type     | Required | Description               |

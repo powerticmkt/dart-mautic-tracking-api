@@ -69,7 +69,7 @@ class MauticTracking {
   }
 
   /// Make Request to Tracking
-  void _makeRequest({Map<String, String> params}) async {
+  Future<void> _makeRequest({Map<String, String> params}) async {
     if (email != null) {
       params.addEntries({MapEntry('email', email)});
     }
@@ -126,7 +126,7 @@ class MauticTracking {
   /// // Track the App Start
   /// await trackAppStart();
   /// ```
-  void trackAppStart() async {
+  Future<void> trackAppStart() async {
     await _makeRequest(
       params: {
         'page_url': 'app_started',
@@ -149,7 +149,7 @@ class MauticTracking {
   /// // Send Screen Path and Timeline Name
   /// trackScreen('view_contact', 'View Contact Info');
   /// ```
-  void trackScreen(String screenPath, [String screenName]) async {
+  Future<void> trackScreen(String screenPath, [String screenName]) async {
     if (screenName == null) {
       await _makeRequest(
         params: {
@@ -182,7 +182,7 @@ class MauticTracking {
   /// // Sent Event Key, Evebt Label, Screen Path and Screen Name
   /// trackEvent('change_password', 'Change User Password', 'user_info', 'User Info');
   /// ```
-  void trackEvent(
+  Future<void> trackEvent(
     String eventKey,
     String eventName,
     String screenPath, [
@@ -206,7 +206,7 @@ class MauticTracking {
   }
 
   /// Modify Contact Tags
-  void _changeTag(Set<String> _tags, {bool addOperation = true}) async {
+  Future<void> _changeTag(Set<String> _tags, {bool addOperation = true}) async {
     _tags = _tags
         .map(
           (item) => (addOperation) ? item : '-$item',
@@ -228,7 +228,7 @@ class MauticTracking {
   /// // Sent Event Key, Event Label and Screen Path
   /// addTag({'tag1', 'tag2'});
   /// ```
-  void addTag(Set<String> _tags) async {
+  Future<void> addTag(Set<String> _tags) async {
     await _changeTag(_tags);
   }
 
@@ -240,7 +240,7 @@ class MauticTracking {
   /// // Sent Event Key, Event Label and Screen Path
   /// removeTag({'tag1', 'tag2'});
   /// ```
-  void removeTag(Set<String> _tags) async {
+  Future<void> removeTag(Set<String> _tags) async {
     await _changeTag(_tags, addOperation: false);
   }
 }
