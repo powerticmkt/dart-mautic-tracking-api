@@ -1,0 +1,15 @@
+# For lint rules and documentation, see http://dart-lang.github.io/linter/lints.
+# Uncomment to specify additional rules.
+linter:
+  rules:
+    - camel_case_types
+    - annotate_overrides
+    - avoid_classes_with_only_static_members
+    - avoid_print
+    - avoid_returning_null_for_future
+    - avoid_returning_null_for_void
+    - avoid_shadowing_type_parameters
+    - await_only_futures
+analyzer:
+  exclude:
+    - example/**

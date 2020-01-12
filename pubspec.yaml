@@ -1,0 +1,11 @@
+name: mautic_tracking_api
+description: API to User Monitoring and Tracking using Mautic for Dart and Flutter
+version: 1.0.0
+homepage: https://github.com/powerticmkt/dart-mautic-tracking-api
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  path: ^1.6.0
+  http:
