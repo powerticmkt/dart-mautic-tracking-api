@@ -2,7 +2,7 @@
 
  App [User Monitoring and Tracking](https://www.mautic.org/docs/en/contacts/contact_monitoring.html) easily for Dart and Flutter using [Mautic: Open Source Marketing Automation Software](https://github.com/mautic/mautic).
 
-The essence of monitoring what happens in an App is similar to monitoring what happens on a website. 
+The essence of monitoring what happens in an App is similar to monitoring what happens on a website.
 
 In short, this package use **Named Screen Path** (e.g. `main_screen`) in your App as your `page_url` field in the tracker, **Named Screen Title** (e.g. `Home Screen`) as your `page_title` field and the **Contact E-mail** as unique identifier. See [Mautic Contact Monitoring](#mautic-contact-monitoring) section for detailed instructions.
 
